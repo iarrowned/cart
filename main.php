@@ -29,7 +29,7 @@ function showProducts(){
                     <td>'.$item['Weight'].' кг</td>
                     <td>'.$item['Price'].' руб</td>
                     <td>'.$item['CategoryName'].'</td>
-                    <td><a href="#">Add to cart</a></td>
+                    <td><a href="/" onclick="addToCart('.$item['id'].')">Add to cart</a></td>
                 </tr>';
     }
 }
@@ -41,4 +41,9 @@ function showCategory(){
                 </tr>';
     }
 }
+
+function getProductById($id){
+    global $connection;
+    $query = $connection->prepare("");
+    }
 

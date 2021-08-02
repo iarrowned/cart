@@ -1,4 +1,6 @@
 <?php
+session_start();
+    require 'ajax/cart.php';
     require 'main.php';
 ?>
 <!doctype html>
@@ -11,6 +13,8 @@
     <title>Products</title>
     <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/cart.js"></script>
 </head>
 <body>
     <div class="categories">
@@ -39,5 +43,6 @@
             </table>
         </div>
     </div>
+    <?php pr(); ?>
 </body>
 </html>
