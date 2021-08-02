@@ -1,0 +1,58 @@
+.categories {
+  margin-bottom: 10px;
+}
+.categories .container {
+  width: 1080px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.categories .container table {
+  width: 50%;
+  border: 1px solid;
+}
+.categories .container table tr th:not(:last-child) {
+  border-right: 1px solid;
+}
+.categories .container table tr td:not(:last-child) {
+  border-right: 1px solid;
+}
+.categories .container table tr td {
+  text-align: center;
+  border-top: 1px solid;
+}
+
+.products .container {
+  width: 1080px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.products .container table {
+  width: 1080px;
+  border: 1px solid;
+}
+.products .container table tr th:not(:last-child) {
+  border-right: 1px solid;
+}
+.products .container table tr td:not(:last-child) {
+  border-right: 1px solid;
+}
+.products .container table tr td {
+  text-align: center;
+  border-top: 1px solid;
+}
+.products .container table tr td a {
+  font-weight: bold;
+}
+.products .container table tr td a:hover {
+  color: cornflowerblue;
+}

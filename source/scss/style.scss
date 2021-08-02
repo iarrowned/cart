@@ -1,0 +1,56 @@
+.categories{
+  margin-bottom: 10px;
+  .container{
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    table{
+      width: 50%;
+      border: 1px solid;
+      tr{
+        th:not(:last-child){
+          border-right: 1px solid;
+        }
+        td:not(:last-child){
+          border-right: 1px solid;
+        }
+        td{
+          text-align: center;
+          border-top: 1px solid;
+        }
+      }
+    }
+  }
+}
+
+.products{
+  .container{
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    table{
+      width: 1080px;
+      border: 1px solid;
+      tr{
+        th:not(:last-child){
+          border-right: 1px solid;
+        }
+        td:not(:last-child){
+          border-right: 1px solid;
+        }
+        td{
+          text-align: center;
+          border-top: 1px solid;
+          a{
+            font-weight: bold;
+          }
+          a:hover{
+            color: cornflowerblue;
+          }
+        }
+      }
+    }
+  }
+}
