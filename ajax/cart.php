@@ -12,6 +12,11 @@
         }
         $_SESSION['cart'] = $cart;
     }
-    function pr(){
-        print_r($_SESSION['cart']);
+
+    if (isset($_POST['action']) && ($_POST['action'] == 'show'))
+    {
+        showCart();
     }
+
+
+

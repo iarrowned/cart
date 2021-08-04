@@ -43,6 +43,9 @@ session_start();
             </table>
         </div>
     </div>
-    <?php pr(); ?>
+    <a href="/" onclick="showCart()">Show</a>
+    <div id="cart">
+        <?= showCart(); ?>
+    </div>
 </body>
 </html>
