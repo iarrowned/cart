@@ -4,6 +4,8 @@
     $login = 'root';
     $pass = 'root';
 
+    $cart = [];
+
 try {$connection = new PDO('mysql:host='.$host.';dbname='.$dbname, $login, $pass);}
 catch (PDOException $e) {die("Error!: " . $e->getMessage()); }
 
@@ -42,8 +44,32 @@ function showCategory(){
     }
 }
 
-function getProductById($id){
-    global $connection;
-    $query = $connection->prepare("");
+function getCart(array $id)
+{
+    $all = getProducts();
+    global $cart;
+    for ($i = 0; $i <= count($all); $i++)
+    {
+        foreach ($id as $k)
+        {
+            if ($all[$i]['id'] == $k)
+            {
+                array_push($cart, $all[$i]);
+            }
+        }
     }
+    return $cart;
+}
+function showCart(){
+    $id = [];
+    foreach ($_SESSION['cart'] as $item) {
+        array_push($id, $item['idProduct']);
+    }
+    foreach (getCart($id) as $i)
+    {
+         echo '<h1>'.$i['ProductName'].'</h1>
+                <a href="#">'.$i['id'].'</a>
+            ';
+    }
+}
 
