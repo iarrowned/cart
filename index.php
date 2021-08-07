@@ -43,9 +43,19 @@ session_start();
             </table>
         </div>
     </div>
-    <a href="/" onclick="showCart()">Show</a>
     <div id="cart">
-        <?= showCart(); ?>
+        <div class="container">
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>quantity</th>
+                    <th>total</th>
+                </tr>
+                <?php if (isset($_SESSION['cart'])) showCart();?>
+            </table>
+        </div>
     </div>
 </body>
 </html>

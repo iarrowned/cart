@@ -67,9 +67,13 @@ function showCart(){
     }
     foreach (getCart($id) as $i)
     {
-         echo '<h1>'.$i['ProductName'].'</h1>
-                <a href="#">'.$i['id'].'</a>
-            ';
+         echo '<tr>
+                    <td>'.$i['id'].'</td>
+                    <td>'.$i['ProductName'].'</td>
+                    <td>'.$i['Price'].'</td>
+                    <td>1</td>
+                    <td><a href="/" onclick="del('.$i['id'].')">del</a></td>
+                </tr>';
     }
 }
 
