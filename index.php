@@ -43,7 +43,8 @@ session_start();
             </table>
         </div>
     </div>
-    <div id="cart">
+    <div id="show">Hide</div>
+    <div id="cart" class="">
         <div class="container">
             <table>
                 <tr>
@@ -57,5 +58,6 @@ session_start();
             </table>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
