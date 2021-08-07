@@ -15,14 +15,14 @@ function addToCart(id){
         }
     })
 }
-function showCart(){
-    console.log('show');
+function del(id){
+    console.log('del');
     $.ajax({
         async: false,
         type: "POST",
         url: "/ajax/cart.php",
         dataType: "text",
-        data: "action=show",
+        data: "action=del&id="+id,
         error: function () {
             alert("Error");
         },
