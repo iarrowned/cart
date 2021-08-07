@@ -27,7 +27,7 @@ function del(id){
             alert("Error");
         },
         success: function (response){
-            $('#cart').html(response);
+
         }
     })
 }

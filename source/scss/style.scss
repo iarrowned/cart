@@ -54,6 +54,14 @@
     }
   }
 }
+#show{
+  border: 1px solid;
+  cursor: pointer;
+  display: inline;
+}
+.hidden {
+  display: none;
+}
 #cart{
   margin-top: 30px;
   .container{
