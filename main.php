@@ -17,7 +17,7 @@ function getCategories(){
 }
 function getProducts(){
     global $connection;
-    $query = $connection->prepare("SELECT p.id `id`, p.ProductName `ProductName`, p.Weight `Weight`, p.Price `Price`, c.CategoryName `CategoryName`
+    $query = $connection->prepare("SELECT p.id `id`, p.ProductName `ProductName`, p.Weight `Weight`, p.Price `Price`, p.CategoryID `CategoryID` , c.CategoryName `CategoryName`
 FROM `goods` p
 INNER JOIN `categories` c ON c.id = p.CategoryID;");
     $query->execute();
@@ -68,11 +68,14 @@ function showCart(){
     foreach (getCart($id) as $i)
     {
          echo '<tr>
-                    <td>'.$i['id'].'</td>
                     <td>'.$i['ProductName'].'</td>
                     <td>'.$i['Price'].'</td>
-                    <td>1</td>
-                    <td><a href="/" onclick="del('.$i['id'].')">del</a></td>
+                    <td class="qua">
+                    <button type="button" class="minus" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                    <input readonly type="number" min="1" value="1" name="quantity">
+                    <button type="button" class="plus" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button></td>
+                    <td>Сумма</td>
+                    <td><a href="/" onclick="del('.$i['id'].')">X</a></td>
                 </tr>';
     }
 }

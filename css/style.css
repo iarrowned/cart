@@ -61,6 +61,7 @@
   border: 1px solid;
   cursor: pointer;
   display: inline;
+  position: fixed;
 }
 
 .hidden {
@@ -69,9 +70,11 @@
 
 #cart {
   margin-top: 30px;
+  position: fixed;
+  background-color: #C87171;
 }
 #cart .container {
-  width: 1080px;
+  width: 500px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,6 +92,42 @@
 }
 #cart .container table tr td:not(:last-child) {
   border-right: 1px solid;
+}
+#cart .container table tr .qua {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#cart .container table tr .qua input[type=number] {
+  display: block;
+  height: 35px;
+  line-height: 32px;
+  width: 50px;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  background: none;
+  font-size: 24px;
+  text-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+}
+#cart .container table tr .qua input[type=number]::-webkit-outer-spin-button,
+#cart .container table tr .qua input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+#cart .container table tr .qua .plus,
+#cart .container table tr .qua .minus {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #C87171;
 }
 #cart .container table tr td {
   text-align: center;

@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     require 'ajax/cart.php';
     require 'main.php';
 ?>
@@ -13,11 +13,12 @@ session_start();
     <title>Products</title>
     <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/cart.js"></script>
 </head>
 <body>
-    <div class="categories">
+    <div class="categories hidden">
         <div class="container">
             <table>
                 <tr>
@@ -28,7 +29,7 @@ session_start();
             </table>
         </div>
     </div>
-    <div class="products">
+    <div class="products hidden">
         <div class="container">
             <table>
                 <tr>
@@ -48,16 +49,174 @@ session_start();
         <div class="container">
             <table>
                 <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>price</th>
-                    <th>quantity</th>
-                    <th>total</th>
+                    <th>Название</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                    <th>Сумма</th>
+                    <th></th>
                 </tr>
-                <?php if (isset($_SESSION['cart'])) showCart();?>
+                <?php if (isset($_SESSION['cart'])) showCart(); ?>
+                <tr>
+                    <td><a href="#buy">Заказать</a></td>
+                </tr>
             </table>
         </div>
     </div>
+    <section class="second">
+        <div class="container">
+            <h2>Ассортимент</h2>
+            <form action="">
+                <h3>Молочная продукция</h3>
+                <div class="items milk">
+                    <?php
+                    $prod = getProducts();
+                    foreach ($prod as $item) {
+                        if ($item['CategoryID'] == 1)
+                        {
+                            echo '<div class="item">
+                                    <div class="card">
+                                        <img src="img/test.jpg" alt="">
+                                        <h4>'.$item['ProductName'].'</h4>
+                                        <h5>'.$item['Weight'].' кг</h5>
+                                        <h6>'.$item['Price'].' руб</h6>
+                                    </div>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                    </div>';
+                        }
+                    }
+                    ?>
+                </div>
+                <h3>Мясная продукция</h3>
+                <div class="categories">
+                    <div class="btn cat1"><p>Говядина</p></div>
+                    <div class="btn cat2"><p>Свинина</p></div>
+                    <div class="btn cat3"><p>Птица</p></div>
+                    <div class="btn cat4"><p>Кролик</p></div>
+                    <div class="btn cat5"><p>Баранина</p></div>
+                </div>
+                <div class="items meat">
+                    <?php
+                    $prv = 'img/test.jpg';
+                    echo '<div class="cat_1 visible">';
+                    foreach ($prod as $item){
+                        if ($item['CategoryID'] == 2){
+
+                            echo '
+                                <div class="item">
+                                    <div class="card">
+                                        <img src="'.$prv.'" onerror="standby()">
+                                        <h4>'.$item['ProductName'].'</h4>
+                                        <h5>'.$item['Weight'].' кг</h5>
+                                        <h6>'.$item['Price'].' руб</h6>
+                                    </div>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                </div>
+                        ';
+                        }
+                    }
+                    echo '</div>';
+                    echo '<div class="cat_2 hidden">';
+                    foreach ($prod as $item){
+                        if ($item['CategoryID'] == 3){
+
+                            echo '
+                                <div class="item">
+                                    <div class="card">
+                                        <img src="'.$prv.'" onerror="standby()">
+                                        <h4>'.$item['ProductName'].'</h4>
+                                        <h5>'.$item['Weight'].' кг</h5>
+                                        <h6>'.$item['Price'].' руб</h6>
+                                    </div>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                </div>
+                        ';
+                        }
+                    }
+                    echo '</div>';
+                    echo '<div class="cat_3 hidden">';
+                    foreach ($prod as $item){
+                        if ($item['CategoryID'] == 4){
+
+                            echo '
+                                <div class="item">
+                                    <div class="card">
+                                        <img src="'.$prv.'" onerror="standby()">
+                                        <h4>'.$item['ProductName'].'</h4>
+                                        <h5>'.$item['Weight'].' кг</h5>
+                                        <h6>'.$item['Price'].' руб</h6>
+                                    </div>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                </div>
+                        ';
+                        }
+                    }
+                    echo '</div>';
+
+                    echo '<div class="cat_4 hidden">';
+                    foreach ($prod as $item){
+                        if ($item['CategoryID'] == 5){
+
+                            echo '
+                                <div class="item">
+                                    <div class="card">
+                                        <img src="'.$prv.'" onerror="standby()">
+                                        <h4>'.$item['ProductName'].'</h4>
+                                        <h5>'.$item['Weight'].' кг</h5>
+                                        <h6>'.$item['Price'].' руб</h6>
+                                    </div>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                </div>
+                        ';
+                        }
+                    }
+                    echo '</div>';
+                    echo '<div class="cat_5 hidden">';
+                    foreach ($prod as $item){
+                        if ($item['CategoryID'] == 6){
+
+                            echo '
+                                <div class="item">
+                                    <div class="card">
+                                        <img src="'.$prv.'" onerror="standby()">
+                                        <h4>'.$item['ProductName'].'</h4>
+                                        <h5>'.$item['Weight'].' кг</h5>
+                                        <h6>'.$item['Price'].' руб</h6>
+                                    </div>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                </div>
+                        ';
+                        }
+                    }
+                    echo '</div>';
+
+                    ?>
+                </div>
+                <h4 id="buy">Для оформления заказа</h4>
+                <div class="cust">
+                    <input type="text" placeholder="Введите имя">
+                    <input type="email" placeholder="Введите email">
+                    <input type="phone" placeholder="Введите телефон">
+                    <input type="submit" value="Заказать">
+                </div>
+            </form>
+            <div class="map">
+                <div class="txt">* После заполнения формы на ваш E-mail и WhatsApp будет отправлено
+                    информационное сообщение, с помощью которого вас уведомят о наличии/отсутствии
+                    товара и сроках ближайшей доставки.</div>
+                <div class="map_item">
+                    <img src="img/map.jpg" alt="">
+                </div>
+            </div>
+            <div class="about">
+                <img src="img/about1.png" alt="">
+                <p>Фермерское хозяйство находится в Тверской области Г. Кашин.
+                    Животные проводят большое количество времени на воздухе и подлежат чуткому ежедневному уходу.
+                    Благодаря удаленности от города, экологически чистой атмосфере и наблюлюдению ветеринаров, наша продукция соответсвует всем стандартам качества.
+                </p>
+            </div>
+        </div>
+    </section>
     <script src="js/script.js"></script>
+                <script src="js/categories.js"></script>
 </body>
 </html>
