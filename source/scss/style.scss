@@ -81,10 +81,41 @@
         td:not(:last-child) {
           border-right: 1px solid;
         }
-
+        .qua{
+          display: flex;
+          justify-content: center;
+          input[type="number"]
+          {
+            display: block;
+            height: 35px;
+            line-height: 32px;
+            width: 50px;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+            -moz-appearance: textfield;
+            -webkit-appearance: textfield;
+            appearance: textfield;
+            background: none;
+            font-size: 24px;
+            text-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+          }
+          input[type="number"]::-webkit-outer-spin-button,
+          input[type="number"]::-webkit-inner-spin-button {
+            display: none;
+          }
+          .plus,
+          .minus {
+            display: block;
+            font-size: 24px;
+            cursor: pointer;
+          }
+        }
         td {
           text-align: center;
           border-top: 1px solid;
+
 
           a {
             font-weight: bold;
