@@ -44,28 +44,29 @@
             </table>
         </div>
     </div>
-    <div id="show">Hide</div>
-    <div id="cart" class="">
-        <div class="container">
-            <table>
-                <tr>
-                    <th>Название</th>
-                    <th>Цена</th>
-                    <th>Количество</th>
-                    <th>Сумма</th>
-                    <th></th>
-                </tr>
-                <?php if (isset($_SESSION['cart'])) showCart(); ?>
-                <tr>
-                    <td><a href="#buy">Заказать</a></td>
-                </tr>
-            </table>
-        </div>
-    </div>
+
     <section class="second">
         <div class="container">
             <h2>Ассортимент</h2>
-            <form action="">
+            <form action="php/order.php" method="post">
+                <div id="show">Hide</div>
+                <div id="cart" class="">
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Название</th>
+                                <th>Цена</th>
+                                <th>Количество</th>
+                                <th>Сумма</th>
+                                <th></th>
+                            </tr>
+                            <?php if (isset($_SESSION['cart'])) showCart(); ?>
+                            <tr>
+                                <td><a href="#buy">Заказать</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <h3>Молочная продукция</h3>
                 <div class="items milk">
                     <?php
@@ -193,9 +194,9 @@
                 </div>
                 <h4 id="buy">Для оформления заказа</h4>
                 <div class="cust">
-                    <input type="text" placeholder="Введите имя">
-                    <input type="email" placeholder="Введите email">
-                    <input type="phone" placeholder="Введите телефон">
+                    <input type="text" name="name" placeholder="Введите имя">
+                    <input type="email" name="email" placeholder="Введите email">
+                    <input type="phone" name="phone" placeholder="Введите телефон">
                     <input type="submit" value="Заказать">
                 </div>
             </form>

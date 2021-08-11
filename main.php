@@ -72,7 +72,7 @@ function showCart(){
                     <td>'.$i['Price'].'</td>
                     <td class="qua">
                     <button type="button" class="minus" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                    <input readonly type="number" min="1" value="1" name="quantity">
+                    <input readonly type="number" min="1" value="1" name="quantity'.$i['id'].'">
                     <button type="button" class="plus" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button></td>
                     <td>Сумма</td>
                     <td><a href="/" onclick="del('.$i['id'].')">X</a></td>
