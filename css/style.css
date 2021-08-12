@@ -57,24 +57,17 @@
   color: cornflowerblue;
 }
 
-#show {
-  border: 1px solid;
-  cursor: pointer;
-  display: inline;
-  position: fixed;
-}
-
 .hidden {
   display: none;
 }
 
 #cart {
-  margin-top: 30px;
   position: fixed;
-  background-color: #C87171;
+  top: 100px;
+  margin: 0 auto;
 }
 #cart .container {
-  width: 500px;
+  width: 70%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,16 +75,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: scroll;
+  height: 250px;
+  border: 1px solid;
+  border-radius: 12px;
 }
 #cart .container table {
+  background-color: rgba(161, 187, 161, 0.6);
   width: 1080px;
-  border: 1px solid;
-}
-#cart .container table tr th:not(:last-child) {
-  border-right: 1px solid;
-}
-#cart .container table tr td:not(:last-child) {
-  border-right: 1px solid;
+  height: 100%;
 }
 #cart .container table tr .qua {
   display: -webkit-box;
@@ -124,14 +116,17 @@
 }
 #cart .container table tr .qua .plus,
 #cart .container table tr .qua .minus {
+  background: none;
   display: block;
   font-size: 24px;
   cursor: pointer;
-  background-color: #C87171;
+}
+#cart .container table tr td:not(:last-child) {
+  border-bottom: 1px solid;
 }
 #cart .container table tr td {
   text-align: center;
-  border-top: 1px solid;
+  height: 50px;
 }
 #cart .container table tr td a {
   font-weight: bold;

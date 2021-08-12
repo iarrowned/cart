@@ -94,6 +94,7 @@
   background: linear-gradient(323.71deg, rgba(138, 191, 85, 0.59) 11.34%, rgba(174, 180, 137, 0) 81.14%, rgba(174, 180, 137, 0.1003) 81.15%);
 }
 .second .container h2 {
+  padding-top: 70px;
   text-align: center;
   font-size: 64px;
   color: rgba(0, 0, 0, 0.69);
@@ -484,3 +485,245 @@
     }
   }
 */
+.hidden {
+  display: none;
+}
+.visible {
+  display: flex;
+}
+.kran {
+  display: none;
+}
+.kran1 {
+  padding-top: 50px;
+  display: none;
+}
+/* —-----------бургер-------------------— */
+ul {
+  /* Убираю маркеры у списка*/
+  list-style: none;
+  /* Делаю элементы блочными. */
+  display: block;
+  /* Убираю отступы. */
+  margin:0px;
+  /* Убираю еще отступы! */
+  padding:0px;
+
+}
+ul:after {
+  /* Делаю элементы блочными. */
+  display: block;
+  /* Убираю выравнивание. */
+  float: none;
+  content: ' ';
+  clear: both;
+}
+ul.mmenuu1 > li {
+  /* Задаю выравнивание и позиционирование. */
+  float: left;
+  /* Считаем координаты относительно исходного места*/
+  position: relative;
+}
+ul.mmenuu1 > li {
+
+  /* Делаю элементы блочными: */
+  display: block;
+  width: 50px;
+  height: 42px;
+  /* Задаю белый цвет. */
+  color: rgba(0, 0, 0, 1);
+  /* Задаю отступ 10px. */
+  padding: 10px;
+  /* Убираю форматирование*/
+  font-size: 24px;
+  text-decoration: none;
+  /* Задаю цвет. */
+  background: url(../img/бургер.svg) no-repeat;
+}
+ul.mmenuu1 > li:hover {
+  /* Задаю цвет при наведении. */
+  background: rgba(158, 190, 217, 0.7);
+  cursor: pointer;
+}
+ul.ssubmenuu1 {
+  position: absolute;
+  width: 240px;
+  top: 37px;
+  right:0px;
+  /* Делаю субменю скрытыми. */
+  display: none;
+  /* Цвет — белый. */
+  background-color: white;
+}
+ul.ssubmenuu1 > li {
+  /* Блочное расположение элементов*/
+  display: block;
+}
+ul.ssubmenuu1 > li {
+  /* Делаю элементы блочными. */
+  display: block;
+  /* Убираю форматирование*/
+  text-decoration: none;
+  color: black;
+  /* Задаю отступ. */
+  padding: 10px;
+  /* Задаю цвет. */
+  /* Еще цвет. */
+  background: rgba(158, 190, 217, 0.5);
+}
+ul.ssubmenuu1 > li:hover {
+  /* Цвет бэкграунда при наведении. */
+  background: rgba(158, 190, 217, 0.7);
+  /* Задаю подчеркивание*/
+  text-decoration: underline;
+  cursor: pointer;
+}
+ul.mmenuu1 > li:hover > ul.ssubmenuu1 {
+  /* Делаю элементы блочными. */
+  display: block;
+}
+/* —------------------------------------— */
+
+.first {
+  max-width:1920px;
+  min-height: 1080px;
+  background:url(../img/main_background.png) no-repeat;
+  background-size: cover;
+
+}
+.first .container {
+  width:1480px;
+  margin:0 auto;
+}
+.first .container header {
+  display: flex;
+  justify-content: space-between;
+
+}
+.first .container header .menu nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.first .container header .menu nav ul li {
+  margin-right: 75px;
+}
+.first .container header .menu nav ul li:last-child {
+  margin-right: 0;
+}
+.first .container header .menu {
+  padding-top: 67px;
+  margin-left: 70px;
+}
+.first .container header .menu nav ul li a {
+
+  color: #444444;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.first .container header .menu nav ul li a:hover{
+  color: #232323;
+}
+.first .container header .logo {
+  padding-top: 63px;
+  font-weight: 600;
+  font-size: 22px;
+  color: #717070;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 27px;
+  padding-left: 65px;
+  position: relative;
+}
+.first .container header .logo:before {
+  content:"";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom:-12px;
+  left: 0;
+  background: url(../img/logo.png) no-repeat;
+}
+.first .container header .phone {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 900;
+  color: #4F4F4F;
+  padding-top: 67px;
+  margin-left: 0;
+  position: relative;
+}
+.first .container header #show {
+  cursor: pointer;
+  border-radius:50%;
+  position: fixed;
+  bottom: 67px;
+  right: 50px;
+  width: 50px;
+  padding: 0;
+  height: 50px;
+  background: url(../img/Group.svg) no-repeat center;
+  background-size: 30px 30px;
+  background-color: rgba(71, 70, 70, 0.3);
+
+}
+.first .container .info {
+  padding-top:330px;
+  width: 524px;
+}
+.first .container .info h1 {
+  font-size: 48px;
+  line-height: 59px;
+  font-weight: 600;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+
+.first .container .info p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #FEFEFE;
+  padding-top:12px ;
+  width: 475px;
+  padding-bottom: 70px;
+}
+.first .container .info a {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #FFFFFF;
+  padding:22px 47px 23px 47px;
+  background-color:rgba(85, 124, 157, 0.81);
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
+  border-radius: 43px;
+
+}
+.first .container .info a:hover{
+  background: rgba(51, 84, 113, 0.79);
+}
+
+.add
+{
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.65);
+  width: 170px;
+  height: 40px;
+
+  padding: 10px 20px;
+  background: rgba(161, 187, 161, 0.22);
+  border-radius: 3px;
+}
+.item .card{
+  margin-bottom: 30px;
+}
+.item {
+  text-align: center;
+}

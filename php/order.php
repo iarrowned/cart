@@ -1,5 +1,6 @@
 <?php
     session_start();
+    header("Location: /");
     require_once '../main.php';
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -26,8 +27,5 @@
     foreach (order($ids) as $item)
     {
         $str = $item['ProductName'].' '.$item['Price'].' '.$_POST['quantity'.$item['id']];
-        echo $str;
+        echo $str."\n";
     }
-
-
-

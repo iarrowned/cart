@@ -68,6 +68,7 @@ function showCart(){
     foreach (getCart($id) as $i)
     {
          echo '<tr>
+                    <td><img src="img/test.jpg" alt="" style="height: 45px; width: 40px;"></td>
                     <td>'.$i['ProductName'].'</td>
                     <td>'.$i['Price'].'</td>
                     <td class="qua">
