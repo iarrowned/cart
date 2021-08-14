@@ -1,0 +1,160 @@
+@media screen and (max-width: 1500px){
+  .first{
+    max-width: 1440px;
+    .container{
+        width: 1080px;
+      header{
+        .logo{}
+        .kran1{
+          .mmenuu1{
+            li{
+              .ssubmenuu1{
+                li{
+                  a{}
+                }
+              }
+            }
+          }
+        }
+        .menu{
+          nav{
+            ul{
+              li{
+                margin-right: 15px;
+                a{}
+              }
+            }
+          }
+        }
+        .phone{}
+      }
+      .info{}
+    }
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .first{
+    max-width: 1440px;
+    .container{
+      width: 900px;
+      header{
+        .logo{}
+        .kran1{
+          .mmenuu1{
+            li{
+              .ssubmenuu1{
+                li{
+                  a{}
+                }
+              }
+            }
+          }
+        }
+        .menu{
+          margin-left: 30px;
+          margin-right: 0;
+          nav{
+            ul{
+              li{
+                margin-right: 15px;
+                a{
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        .phone{
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+      .info{}
+    }
+  }
+}
+
+@media screen and (max-width: 769px){
+  .first{
+    .container{
+      width: 670px;
+      header{
+        .kran1{
+          display: block;
+        }
+        .menu{
+          display: none;
+        }
+        #show{
+        }
+        .phone{
+          display: none;
+        }
+      }
+      .info{}
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .first{
+    min-height: 600px;
+    .container{
+      width: 320px;
+      header{
+        .logo{}
+        .kran1{
+          .mmenuu1{
+            li{
+              .ssubmenuu1{
+                li{
+                  a{}
+                }
+              }
+            }
+          }
+        }
+        .menu{
+          margin-left: 30px;
+          margin-right: 0;
+          nav{
+            ul{
+              li{
+                margin-right: 15px;
+                a{
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        #show{
+          bottom: 20px;
+          right: 20px;
+        }
+        .phone{
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+      .info{
+        padding-top: 150px;
+        text-align: center;
+        width: 320px;
+        h1{
+          font-size: 22px;
+          line-height: 30px;
+        }
+        p{
+          font-size: 18px;
+          width: 320px;
+          display: block;
+        }
+        a{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

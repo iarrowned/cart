@@ -14,10 +14,51 @@
     <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/cart.js"></script>
 </head>
 <body>
+<div class="first">
+    <div class="container">
+        <header>
+            <div class="logo">
+                ЭкоФерма
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#form">Асcортимент</a></li>
+                        <li><a href="#info">О сервисе</a></li>
+                        <li><a href="#kont">Контакты</a></li>
+                        <li><a href="#kont">Доставка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="show"></div>
+            <div class="kran1">
+                <ul class="mmenuu1">
+                    <li>
+                        <ul class="ssubmenuu1">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#form">Асcортимент</a></li>
+                            <li><a href="#info">О сервисе</a></li>
+                            <li><a href="#kont">Контакты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="phone">8-904-027-96-74</div>
+        </header>
+        <div class="info">
+            <h1>Продукты с заботой о вашем здоровье </h1>
+            <p>магазин экологически чистого питания доступного каждому</p>
+            <a href="#form">посмотреть товар</a>
+        </div>
+    </div>
+</div>
     <div class="categories hidden">
         <div class="container">
             <table>
@@ -49,11 +90,11 @@
         <div class="container">
             <h2>Ассортимент</h2>
             <form action="php/order.php" method="post">
-                <div id="show">Hide</div>
-                <div id="cart" class="">
+                <div id="cart" class="hidden">
                     <div class="container">
                         <table>
                             <tr>
+                                <th></th>
                                 <th>Название</th>
                                 <th>Цена</th>
                                 <th>Количество</th>
@@ -76,12 +117,12 @@
                         {
                             echo '<div class="item">
                                     <div class="card">
-                                        <img src="img/test.jpg" alt="">
+                                        <img src="'.$item['Preview'].'" alt="">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
                                     </div>
-                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">В корзину</a>
                     </div>';
                         }
                     }
@@ -97,20 +138,18 @@
                 </div>
                 <div class="items meat">
                     <?php
-                    $prv = 'img/test.jpg';
                     echo '<div class="cat_1 visible">';
                     foreach ($prod as $item){
                         if ($item['CategoryID'] == 2){
-
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
                                     </div>
-                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">В корзину</a>
                                 </div>
                         ';
                         }
@@ -123,12 +162,12 @@
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
                                     </div>
-                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">В корзину</a>
                                 </div>
                         ';
                         }
@@ -141,12 +180,12 @@
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
                                     </div>
-                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">В корзину</a>
                                 </div>
                         ';
                         }
@@ -160,12 +199,12 @@
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
                                     </div>
-                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">В корзину</a>
                                 </div>
                         ';
                         }
@@ -174,16 +213,15 @@
                     echo '<div class="cat_5 hidden">';
                     foreach ($prod as $item){
                         if ($item['CategoryID'] == 6){
-
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
                                     </div>
-                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">Kek</a>
+                                    <a class="add" href="/" onclick="addToCart('.$item['id'].')">В корзину</a>
                                 </div>
                         ';
                         }
@@ -194,9 +232,9 @@
                 </div>
                 <h4 id="buy">Для оформления заказа</h4>
                 <div class="cust">
-                    <input type="text" name="name" placeholder="Введите имя">
-                    <input type="email" name="email" placeholder="Введите email">
-                    <input type="phone" name="phone" placeholder="Введите телефон">
+                    <input type="text" name="name" required placeholder="Введите имя">
+                    <input type="email" name="email" required placeholder="Введите email">
+                    <input type="phone" name="phone" required placeholder="Введите телефон">
                     <input type="submit" value="Заказать">
                 </div>
             </form>

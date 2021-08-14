@@ -1,0 +1,90 @@
+@media screen and (max-width: 1500px) {
+  .first {
+    max-width: 1440px;
+  }
+  .first .container {
+    width: 1080px;
+  }
+  .first .container header .menu nav ul li {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .first {
+    max-width: 1440px;
+  }
+  .first .container {
+    width: 900px;
+  }
+  .first .container header .menu {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .first .container header .menu nav ul li {
+    margin-right: 15px;
+  }
+  .first .container header .menu nav ul li a {
+    font-size: 14px;
+  }
+  .first .container header .phone {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .first .container {
+    width: 670px;
+  }
+  .first .container header .kran1 {
+    display: block;
+  }
+  .first .container header .menu {
+    display: none;
+  }
+  .first .container header .phone {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .first {
+    min-height: 600px;
+  }
+  .first .container {
+    width: 320px;
+  }
+  .first .container header .menu {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .first .container header .menu nav ul li {
+    margin-right: 15px;
+  }
+  .first .container header .menu nav ul li a {
+    font-size: 14px;
+  }
+  .first .container header #show {
+    bottom: 20px;
+    right: 20px;
+  }
+  .first .container header .phone {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .first .container .info {
+    padding-top: 150px;
+    text-align: center;
+    width: 320px;
+  }
+  .first .container .info h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .first .container .info p {
+    font-size: 18px;
+    width: 320px;
+    display: block;
+  }
+  .first .container .info a {
+    font-size: 16px;
+  }
+}

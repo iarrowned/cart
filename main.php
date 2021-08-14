@@ -17,7 +17,7 @@ function getCategories(){
 }
 function getProducts(){
     global $connection;
-    $query = $connection->prepare("SELECT p.id `id`, p.ProductName `ProductName`, p.Weight `Weight`, p.Price `Price`, p.CategoryID `CategoryID` , c.CategoryName `CategoryName`
+    $query = $connection->prepare("SELECT p.id `id`, p.ProductName `ProductName`, p.preview `Preview`, p.Weight `Weight`, p.Price `Price`, p.CategoryID `CategoryID` , c.CategoryName `CategoryName`
 FROM `goods` p
 INNER JOIN `categories` c ON c.id = p.CategoryID;");
     $query->execute();
@@ -68,6 +68,7 @@ function showCart(){
     foreach (getCart($id) as $i)
     {
          echo '<tr>
+                    <td><img src="'.$i['Preview'].'" alt="" style="height: 45px; width: 40px;"></td>
                     <td>'.$i['ProductName'].'</td>
                     <td>'.$i['Price'].'</td>
                     <td class="qua">
