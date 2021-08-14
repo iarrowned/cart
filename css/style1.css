@@ -90,7 +90,7 @@
 }
 
 .second {
-  height: 4300px;
+  height: 5000px;
   background: linear-gradient(323.71deg, rgba(138, 191, 85, 0.59) 11.34%, rgba(174, 180, 137, 0) 81.14%, rgba(174, 180, 137, 0.1003) 81.15%);
 }
 .second .container h2 {
@@ -264,7 +264,7 @@
   }
 
   .second {
-    height: 5000px;
+    height: 7000px;
   }
   .second .container form h4 {
     text-align: center;

@@ -117,7 +117,7 @@
                         {
                             echo '<div class="item">
                                     <div class="card">
-                                        <img src="img/test.jpg" alt="">
+                                        <img src="'.$item['Preview'].'" alt="">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
@@ -138,15 +138,13 @@
                 </div>
                 <div class="items meat">
                     <?php
-                    $prv = 'img/test.jpg';
                     echo '<div class="cat_1 visible">';
                     foreach ($prod as $item){
                         if ($item['CategoryID'] == 2){
-
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
@@ -164,7 +162,7 @@
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
@@ -182,7 +180,7 @@
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
@@ -201,7 +199,7 @@
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
@@ -215,11 +213,10 @@
                     echo '<div class="cat_5 hidden">';
                     foreach ($prod as $item){
                         if ($item['CategoryID'] == 6){
-
                             echo '
                                 <div class="item">
                                     <div class="card">
-                                        <img src="'.$prv.'" onerror="standby()">
+                                        <img src="'.$item['Preview'].'" onerror="standby()">
                                         <h4>'.$item['ProductName'].'</h4>
                                         <h5>'.$item['Weight'].' кг</h5>
                                         <h6>'.$item['Price'].' руб</h6>
@@ -235,10 +232,10 @@
                 </div>
                 <h4 id="buy">Для оформления заказа</h4>
                 <div class="cust">
-                    <input type="text" name="name" placeholder="Введите имя">
-                    <input type="email" name="email" placeholder="Введите email">
-                    <input type="phone" name="phone" placeholder="Введите телефон">
-                    <input type="submit" value="Заказать" onclick="del([1, 2, 3, 4, 5, 6])">
+                    <input type="text" name="name" required placeholder="Введите имя">
+                    <input type="email" name="email" required placeholder="Введите email">
+                    <input type="phone" name="phone" required placeholder="Введите телефон">
+                    <input type="submit" value="Заказать">
                 </div>
             </form>
             <div class="map">
